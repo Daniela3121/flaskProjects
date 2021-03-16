@@ -28,10 +28,14 @@ def blue():
 def indigo():
     return render_template("rainbow_template.html",color="indigo")
 
-@app.route('/purple')
+@app.route('/purple') 
 def purple():
     return render_template("rainbow_template.html",color="purple")
 
- 
+@app.route('/rainbowList')
+def rainbow():
+     colors= ["red","orange","yellow","green","blue","indigo","purple"]
+     return render_template("rainbow.html", colors = colors)
+
 if __name__== '__main__':
     app.run(debug=True, host = '0.0.0.0')
