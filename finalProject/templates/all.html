@@ -1,0 +1,7 @@
+{% for message in messages %}
+<p>{{message["message"]}} from {{message["name"]}}</p>
+<form action="/display" method="post">
+    <input type="hidden" name="message" value="{{message['message']}}"/>
+    <input type="hidden" value="display msgs"/>
+</form>
+{%endfor%}

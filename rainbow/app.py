@@ -7,7 +7,6 @@ def index():
 @app.route('/red')
 def red():
     return render_template("rainbow_template.html",color="red")
-
 @app.route('/orange')
 def orange():
     return render_template("rainbow_template.html",color="orange")
